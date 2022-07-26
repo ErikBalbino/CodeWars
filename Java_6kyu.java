@@ -22,8 +22,24 @@ public static String[] solution(String s) {
 //"Success"  =>  ")())())"
 //"(( @"     =>  "))((" 
 
+import java.lang.String;
 public class DuplicateEncoder {
 	static String encode(String word){
+    String nWord = "";
+    for (int i = 0; i == word.length; i++) {
+      if (word[i].equals('(') or nWord.contais(word[i])) {
+        nWord = nWord+')';
+      } else {
+        nWord = nWord+'(';
+      }
+    }
+    System.out.print(word);
     return word;
   }
+}
+
+public class principal { 
+    public static void main(String args) {
+    System.out.println(DuplicateEncoder("Prespecialized"))
+    }
 }
