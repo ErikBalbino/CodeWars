@@ -1,0 +1,15 @@
+//Split Strings
+//Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+
+public static String[] solution(String s) {
+      LinkedList<String> lista = new LinkedList<String>();
+      if (s.length()%2 != 0) {
+        s = s+"_";
+      }
+      for (int i = 0; i < (s.length()); i = i+2) {
+        String elemento = s.substring(i , i+2);
+        lista.add(elemento);
+      }
+      String[] stringArray = lista.toArray(new String[0]);
+      return stringArray;
+    }
